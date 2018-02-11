@@ -1,0 +1,28 @@
+<h3> Want to start contributing to opensource Rust Projects ? Pick any of the easy open issues from the list below</h3>
+{% block body %}
+<img src="https://www.rust-lang.org/logos/rust-logo-128x128-blk.png" alt="Paris">
+
+  <ul>
+  <h3>Project - Issue</h3>
+  {% for item in obj %}
+  {% set name = item.split('/')[4] + '/' + item.split('/')[5] %}
+  {% set n =  item.split('/') %}
+  {% set link = [n[0],n[1],'github.com',n[4],n[5]] %}
+  {% set l = '/'.join(link) %} 
+    <li><h3><a href="{{ l }}"> {{ name }} </a> - <a href="{{ obj[item]["repo"] }}">{{ obj[item]["title"] }}</a></h3></li>
+  {% endfor %}
+  </ul>
+
+{% endblock %}
+<style>
+body {
+color: red;
+}
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+}
+
+</style>
