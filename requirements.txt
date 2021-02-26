@@ -1,5 +1,5 @@
 aiofiles==0.3.2
-aiohttp==2.3.10
+aiohttp==3.7.4
 appnope==0.1.0
 async-timeout==2.0.0
 asyncio==3.4.3
